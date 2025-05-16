@@ -1,33 +1,14 @@
+a=b=c=0
+a = float(input('enter the first number :     '))
+b = float(input('enter the second number :    '))
+c = float(input('enter the third number :     '))
 
-while True:
-    print('Do you want to perform a calculation? (y/n)')
-    a = input("Enter 'y' to proceed: ")
+max = a
+if b>max:
+  max = b
 
-    if a.lower() != 'y':
-        print("Goodbye!")
-        break
+if c>max :
+  max = c
 
-    x = float(input('Enter the first number: '))
-    y = float(input('Enter the second number: '))
-
-    print('Enter the value z as:')
-    print('1 for addition')
-    print('2 for subtraction')
-    print('3 for multiplication')
-    print('4 for division')
-
-    z = float(input('Enter your choice (1-4): '))
-
-    if z == 1:
-        print('You chose addition:', x + y)
-    elif z == 2:
-        print('You chose subtraction:', x - y)
-    elif z == 3:
-        print('You chose multiplication:', x * y)
-    elif z == 4:
-        if y == 0:
-            print('Error: Cannot divide by zero')
-        else:
-            print('You chose division:', x / y)
-    else:
-        print('Invalid operation choice')
+print('largest number is', max)
+  
