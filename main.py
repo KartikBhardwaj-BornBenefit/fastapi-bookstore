@@ -11,6 +11,7 @@ elif op == '*':
   print('you chose multiplication', num1*num2)
 
 elif op == '/':
-  print('you chose division', num1/num2)
-  if num2 == 0 :
+  if num2 == 0:
     print('zero can\'t be the denominator')
+  else:
+    print('you chose division', num1/num2)
