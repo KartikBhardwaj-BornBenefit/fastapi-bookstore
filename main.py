@@ -1,32 +1,36 @@
-if a== 'y':
-  x = float(input('enter the first number:    '))
-  y = float(input('enter the second number:   '))
+def calculator():
+  while True:
+      print('Do you want to perform a calculation? (y/n)')
+      a = input("Enter 'y' to proceed: ")
 
-  print('enter the value z as 1 for addition,  2 for subtraction, 3 for multiplication, 4 for division ')
+      if a.lower() != 'y':
+          print("Goodbye!")
+          break
 
-  z = float(input('enter the value of z as stated above:     '))
+      x = float(input('Enter the first number: '))
+      y = float(input('Enter the second number: '))
 
-  if z ==1:
-      print('you chose addition' , x+y)
+      print('Enter the value z as:')
+      print('1 for addition')
+      print('2 for subtraction')
+      print('3 for multiplication')
+      print('4 for division')
 
-  elif z ==2:
-    print(' you chose division' , x-y)
+      z = float(input('Enter your choice (1-4): '))
 
-  elif z ==3:
-    print('you chose multiplication' , x*y)
+      if z == 1:
+          print('You chose addition:', x + y)
+      elif z == 2:
+          print('You chose subtraction:', x - y)
+      elif z == 3:
+          print('You chose multiplication:', x * y)
+      elif z == 4:
+          if y == 0:
+              print('Error: Cannot divide by zero')
+          else:
+              print('You chose division:', x / y)
+      else:
+          print('Invalid operation choice')
 
-  elif z ==4:
-    print('you chose division' , x/y)
-  else: 
-    if y == 0:
-      print('error')
-
-  
-
-print('do you want to continue with any other operation or any other numbers?')
-print(' press y for yes and n for no')
-a = input("Enter 'y' to proceed: ")  # Prompt the user to input a value
-if a == 'y':
-    print("You chose yes!")
-else:
-    print("You didn't choose yes.")
+if __name__ == "__main__":
+  calculator()
