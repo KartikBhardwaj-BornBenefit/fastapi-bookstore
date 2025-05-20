@@ -1,4 +1,2 @@
-l = list('hello1234 ')
-print(l)
-l1 = list(input('enter a string to make it a list: '))
-print(l1)
+k = list(input('enter the list:  '))
+print(3*k)
