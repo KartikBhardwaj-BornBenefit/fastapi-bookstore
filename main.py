@@ -1,4 +1,5 @@
-def cel_fan(x):
+def reusable_function():
+  return    (  cel_fan(x):
   return(x*9/5)+32
 
 def km_miles(y):
@@ -14,9 +15,28 @@ num = int(input('enter the number :  '))
 if num ==1:
   x = float(input('enter the celcius value : '))
   print(cel_fan(x))
-elif 
-num == 2 :
+elif num == 2 :
+  y = float(input('enter the km value :  '))
+  print(km_miles(y))
+
+elif num ==3 :
+  z = float(input('enter the value of z :  ' ))
+  print(inr_usd())
+
+else :
+  print('you\n chose \nto\n exit'))
 
 
-  
-  
+
+print(' if you want to try again then just type A')
+TRY_AGAIN = input('enter the value at once')
+
+if TRY_AGAIN == "A" :
+  print(reusable_function())
+
+
+
+
+
+
+
