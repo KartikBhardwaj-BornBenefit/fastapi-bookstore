@@ -1,12 +1,30 @@
-print('----------------------INVOICE-----------------------')
+# A smart to do list with categories, deadlines and auto sorting def to_do_list(*tasks)
+from datetime import datetime
+def to_do_list(tasks,timestamps):
+  for task in tasks:
+    print(sorted(f"task:{task}")
 
-def generate_invoice(*items, **details):
-  for key, value in details.items():
-    print(f"{key}: {value}")
-    for item in items:
-      print(f"item: {items}")
+  for timestamp in timestamps:
+     print(sorted(f"timestamp:{timestamp}")
 
 
-generate_invoice( "aalu","pyar",name ="kartik", age=21 , city ="jhajjar" , state = "haryana", )
+
+tasks =['do 12 hours of coding']
+timestamps = ['6:00am']
+while True:
+  tasks.append(input('enter a task:  '))
+  timestamps.append(datetime.now())
+  to_do_list(tasks,timestamps)
+  print('if you want to remove a task enter 1\n \t if it's alll for today enter 2\n'')
+  your_input = input('enter your choice:  ')
+  if your_input == 1 :
+    tasks.pop(input('enter the task you want to remove: '))
+  elif  your_input ==2 :
+    print('thanks , best of luck for your tasks and have a nice day')
+    break
+  else:
+    continue
+
 
   
+
