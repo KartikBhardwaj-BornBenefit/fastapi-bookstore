@@ -1,7 +1,19 @@
-from flask import Flask, render_template
-app = Flask(__name__)
-@app.route('/')
+from fastapi import FastAPI
+import random
+
+app = FastAPI()
+
+@app.get("/")
 def home():
-    return render_template('index.html')
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+  return{"message": "welcome to the word game API "}
+
+@app.get("/jumble")
+def jumble_word(word: str):
+  if len(word) <3:
+    return {"error": "word too short"}
+   chars = list(word)
+  random.shuffle(chars)
+  jumbled=''.join(chars)
+    return{"original":word, "jumbled":jumbled}
+
+
