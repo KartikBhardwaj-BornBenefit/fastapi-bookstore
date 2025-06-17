@@ -1,6 +1,7 @@
+from fastapi import FastAPI, Query
+import math
+from typing import List
 
-from fastapi import FastAPI
-import random
 
 app = FastAPI()
 
@@ -8,11 +9,14 @@ app = FastAPI()
 def home():
     return{"message": "welcome to the word game API "}
 
-@app.get("/jumble")
-def jumble_word(word: str):
-    if len(word) < 3:
-        return {"error": "word too short"}
-    chars = list(word)
-    random.shuffle(chars)
-    jumbled = ''.join(chars)
-    return{"original": word, "jumbled": jumbled}
+@app.get("/student_name_and_marks")
+def avg(name:str , marks:list[int], subjects= list[str]):
+    return{"name": name, "marks":marks, "subjects": subjects , "avg": sum(marks)/len(subjects)}
+   
+
+    
+
+
+
+
+
