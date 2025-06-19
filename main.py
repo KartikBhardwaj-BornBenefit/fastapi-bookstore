@@ -38,3 +38,42 @@ print("- Each [] creates a list")
 print("- Commas (,) separate items in a row")
 print("- Rows are separated by commas too")
 print("- The whole thing is wrapped in [] to make it one big list")
+
+print("\n" + "="*50)
+print("=== LESSON 2: Accessing Cells (Like Excel A1, B1) ===")
+print("="*50)
+
+# Our table again:
+table = [
+    ["Name",  "Age", "City"],     # Row 0 (Header)
+    ["John",  25,    "Paris"],    # Row 1
+    ["Alice", 30,    "London"],   # Row 2
+    ["Bob",   22,    "Tokyo"]     # Row 3
+]
+
+print("Our table:")
+for i, row in enumerate(table):
+    print(f"Row {i}: {row}")
+
+print("\n=== How to Access Specific Cells ===")
+print("In Excel, you click on A1, B2, etc.")
+print("In Python, we use [row][column] - both start from 0!")
+print()
+
+# Think of it like coordinates: [row][column]
+print("table[0][0] =", table[0][0])  # First row, first column = "Name"
+print("table[1][0] =", table[1][0])  # Second row, first column = "John"
+print("table[1][1] =", table[1][1])  # Second row, second column = 25
+print("table[2][2] =", table[2][2])  # Third row, third column = "London"
+
+print("\n=== Excel vs Python Comparison ===")
+print("Excel A1 = table[0][0] =", table[0][0])
+print("Excel B1 = table[0][1] =", table[0][1])
+print("Excel C1 = table[0][2] =", table[0][2])
+print("Excel A2 = table[1][0] =", table[1][0])
+print("Excel B2 = table[1][1] =", table[1][1])
+
+print("\n=== Remember: ===")
+print("- [0] means first (Python starts counting from 0)")
+print("- [row][column] - row first, then column")
+print("- table[1][2] means: row 1, column 2")
