@@ -52,8 +52,35 @@ table = [
 ]
 
 print("Our table:")
+
+# Let's break down this loop step by step:
+print("\n=== Understanding the Loop (Lines 54-56) ===")
+print("for i, row in enumerate(table):")
+print("  - 'enumerate' gives us both the position AND the content")
+print("  - 'i' = the row number (0, 1, 2, 3...)")
+print("  - 'row' = the actual row data ['Name', 'Age', 'City']")
+print()
+
+# Here's what happens step by step:
 for i, row in enumerate(table):
-    print(f"Row {i}: {row}")
+    print(f"Step {i+1}: i={i}, row={row}")
+    print(f"  So we print: Row {i}: {row}")
+    print()
+
+print("=== Why use enumerate? ===")
+print("Instead of writing:")
+print("  print('Row 0:', table[0])")
+print("  print('Row 1:', table[1])")
+print("  print('Row 2:', table[2])")
+print("  print('Row 3:', table[3])")
+print()
+print("enumerate() does it automatically for ANY size table!")
+
+print("\n=== What each part means: ===")
+print("- for = start a loop")
+print("- i, row = two variables (position, content)")
+print("- enumerate(table) = gives both position and content")
+print("- f'Row {i}: {row}' = formats the output nicely")
 
 print("\n=== How to Access Specific Cells ===")
 print("In Excel, you click on A1, B2, etc.")
