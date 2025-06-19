@@ -1,7 +1,4 @@
-kartik = ['a', 'b', 'c', 'd', 1, 2]
-print(len(kartik))
-print(sum(kartik))
-
-
-
-
+kartik =['k','a',1,4,5,'t']
+for i in kartik:
+  if isinstance(i,(int)):
+    print(sum(i))
