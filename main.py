@@ -1,12 +1,9 @@
 def main_function(cells):
   for i, row in enumerate(cells):
-    n=0
-    n+=1
     formatted_row = []
     for n in range(len(row)):
       formatted_row.append(f"{row[n]:^15}")
-
-print(f"ROW{i}: {' || '.join(formatted_row)}")
+    print(f"ROW{i}: {' || '.join(formatted_row)}")
 
 
 my_class = [['student' , 'eng_marks' , 'math_marks', 'sci_marks', 'comp_marks'],['kartik',90,9,8,91],
@@ -36,8 +33,8 @@ while True:
     sci_marks = int(input('enter marks of science subject:  '))
     comp_marks = int(input('enter marks of computer subject:  '))
     my_class.append([name,eng_marks,math_marks,sci_marks,comp_marks])
-
-
+    print("\nUpdated table:")
+    main_function(my_class)
 
   elif x==2 :
     main_function(my_class)
