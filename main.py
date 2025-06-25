@@ -50,8 +50,11 @@ while True:
       for i, row in enumerate(my_class):
         for j, cell in enumerate(row):
           if str(cell) == student_name:
-            print(f"Found '{student_name}' at row {i}, column {j}")
-            found = True
+           found = True
+           total = row[1] + row[2] + row[3] + row[4]
+           percentage = (total /400)*100
+           print('percentage of', student_name, 'is', percentage)
+           
       if not found:
         print(f"'{student_name}' not found in the table")
 
