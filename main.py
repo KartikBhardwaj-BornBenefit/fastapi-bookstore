@@ -18,7 +18,7 @@ for i, row in enumerate(my_class):
   formatted_row.append(f"{row[3]:^10}")      
   formatted_row.append(f"{row[4]:^10}")      
 
-  print(f"ROW{i}: {' || '.join(formatted_row)}")
+  print(f"ROW {i}: {' || '.join(formatted_row)}")
 
 while True:
   print('enter 1 to add new student' )
@@ -38,11 +38,21 @@ while True:
 
   elif x==2 :
     main_function(my_class)
-    break
-
+    print('now i guess you need to find percentage of a student, just enter the name of student and relax.....',100*"*")
+    print('or if you just want to exit enter exit \n or if you want avg, enter percentage')
+    user_choice = input('enter your choice :   ')
+    if user_choice == 'exit':
+      break
+    elif user_choice == 'percentage':
+      print('please select name of the student you wanna find percentage of :   ')
+      student_name = input('enter name of the student:   ')
+      for i , row in enumerate(my_class):
+        if row[i] == student_name:
+          print(i)
 
   else :
     print('invalid choice')
+
 
 
 
