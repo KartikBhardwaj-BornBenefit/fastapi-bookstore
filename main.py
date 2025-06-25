@@ -46,9 +46,14 @@ while True:
     elif user_choice == 'percentage':
       print('please select name of the student you wanna find percentage of :   ')
       student_name = input('enter name of the student:   ')
-      for i , row in enumerate(my_class):
-        if row[0] == student_name:
-          print(f"Found {student_name} at row {i}, column 0")
+      found = False
+      for i, row in enumerate(my_class):
+        for j, cell in enumerate(row):
+          if str(cell) == student_name:
+            print(f"Found '{student_name}' at row {i}, column {j}")
+            found = True
+      if not found:
+        print(f"'{student_name}' not found in the table")
 
   else :
     print('invalid choice')
