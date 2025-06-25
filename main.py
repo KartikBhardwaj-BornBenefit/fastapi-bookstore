@@ -22,7 +22,7 @@ for i, row in enumerate(my_class):
 
 while True:
   print('enter 1 to add new student' )
-  print('enter 2  to exit')
+  print('enter 2  to exit, or to find percentage of a student')
   x= int(input('enter your choice :  '))
   if x==1 :
     print('please enter the details of new student ')
