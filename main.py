@@ -14,3 +14,4 @@ for i in marks:
     print('enter marks in valid format')
  
 
+print(converted_marks)
