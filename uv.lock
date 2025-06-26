@@ -386,6 +386,7 @@ source = { virtual = "." }
 dependencies = [
     { name = "fastapi" },
     { name = "flask" },
+    { name = "numpy" },
     { name = "openpyxl" },
     { name = "pandas" },
 ]
@@ -394,6 +395,7 @@ dependencies = [
 requires-dist = [
     { name = "fastapi", specifier = ">=0.115.12" },
     { name = "flask", specifier = ">=3.1.1" },
+    { name = "numpy", specifier = ">=2.3.1" },
     { name = "openpyxl", specifier = "==3.1.5" },
     { name = "pandas", specifier = ">=2.3.0" },
 ]
