@@ -6,10 +6,9 @@ def excel_automation():
   students = []
   for row in orignal_data[1:] :
     student_dict = dict(zip(headers, row))
-
-  total = student_dict['eng_marks'] + student_dict['math_marks'] + student_dict['sci_marks'] + student_dict['comp_marks']
-  student_dict['percentage'] = round(total/4,2)
-  students.append(student_dict)
+    total = student_dict['eng_marks'] + student_dict['math_marks'] + student_dict['sci_marks'] + student_dict['comp_marks']
+    student_dict['percentage'] = round(total/4,2)
+    students.append(student_dict)
   df = pd.DataFrame(students)
   df.to_excel("student_marksheet.xlsx", index= False, engine= 'openpyxl')
   print("Excel file 'student_marksheet.xlsx' created successfully.")
@@ -53,7 +52,7 @@ while True:
     user_choice_2 = input('enter your choices :  ')
     if user_choice_2 == 'continue':
       continue
-    elif user_choice == 'exit' :
+    elif user_choice_2 == 'exit' :
       excel_automation()
 
-      breake
+      break
