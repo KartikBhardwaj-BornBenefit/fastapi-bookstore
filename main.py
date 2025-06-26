@@ -20,7 +20,7 @@ orignal_data = [['name', 'eng_marks', 'math_marks', 'sci_marks', 'comp_marks']]
 
 
 while True:
- 
+
   print('enter 1 for entering data in excel \n enter 2 for viewing the entered data')
 
   user_choice = int(input('enter your choice :  '))
@@ -34,7 +34,7 @@ while True:
       try:
         mark = int(i)  
         converted_marks.append(mark)
-       
+
       except ValueError:
         print('enter marks in valid format')
 
@@ -44,7 +44,7 @@ while True:
     new_list.reverse()
     orignal_data.append(new_list)
     print(20*'*','DATA STORED SUCCESSFULLY',20*'*')
-    
+
 
   else:
     print('entered data is :  ')
@@ -55,9 +55,5 @@ while True:
       continue
     elif user_choice == 'exit' :
       excel_automation()
-      
+
       break
-
-
-
-
