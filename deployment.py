@@ -35,6 +35,12 @@ def get_db():
     finally:
         db.close()    
 
+@app.get("/")
+def read_root():
+    return {"message" : FastAPI is "running"}
+
+
+
 @app.post("/books" , response_model= deployment_schemas.BookOut)
 def create_book( book: deployment_schemas.BookCreate  ,db:Session = Depends(get_db)):
     db_book = deployment_models.Book(title = book.title , author = book.author)
