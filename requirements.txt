@@ -1,5 +1,5 @@
 fastapi
-uvicorn
+uvicorn[standard]==0.29.0
 sqlalchemy
 psycopg2-binary
 python-dotenv
